@@ -1,0 +1,23 @@
+{
+  "name": "@nightwatch/supertest",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightwatchjs/nightwatch-plugin-supertest.git"
+  },
+  "keywords": [
+    "nightwatchjs",
+    "supertest"
+  ],
+  "author": "Andrei Rusu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightwatchjs/nightwatch-plugin-supertest/issues"
+  },
+  "homepage": "https://github.com/nightwatchjs/nightwatch-plugin-supertest#readme"
+}

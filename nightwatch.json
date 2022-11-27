@@ -1,0 +1,10 @@
+{
+  "unit_tests_mode": false,
+  "start_session": false,
+  "webdriver": {
+    "start_process": false
+  },
+  "detailed_output": true,
+  "disable_colors": true,
+  "plugins": ["./test_plugin.js"]
+}

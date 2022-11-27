@@ -1,7 +1,7 @@
 # @nightwatch/apitesting
 
 [![npm](https://img.shields.io/npm/v/@nightwatch/apitesting.svg)](https://www.npmjs.com/package/@nightwatch/apitesting)
-[![Node.js CI](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/tests.yaml/badge.svg?branch=main)](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/tests.yaml)
+[![Node.js CI](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/tests.yaml/badge.svg?branch=main)](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/node.js.yml)
 [![Discord][discord-badge]][discord]
 
 ## Nightwatch.js API Testing

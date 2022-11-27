@@ -1,5 +1,8 @@
 {
   "name": "@nightwatch/apitesting",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.1.0",
   "description": "",
   "main": "index.js",

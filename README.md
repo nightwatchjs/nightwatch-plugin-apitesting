@@ -1,5 +1,9 @@
 # @nightwatch/apitesting
 
+[![npm](https://img.shields.io/npm/v/@nightwatch/apitesting.svg)](https://www.npmjs.com/package/@nightwatch/apitesting)
+[![Node.js CI](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/tests.yaml/badge.svg?branch=main)](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/tests.yaml)
+[![Discord][discord-badge]][discord]
+
 ## Nightwatch.js API Testing
 
 This plugin brings support for API testing into Nightwatch. It contains the following features:
@@ -177,3 +181,6 @@ await mockServer.setup((app) => {
 
 ## License
 MIT
+
+[discord-badge]: https://img.shields.io/discord/618399631038218240.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff&style=flat-square
+[discord]: https://discord.gg/SN8Da2X

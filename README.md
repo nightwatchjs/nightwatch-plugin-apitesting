@@ -30,7 +30,7 @@ Edit your `nightwatch.json` (or `nightwatch.conf.js`) file and add the following
 }
 ```
 
-You also need to turn off the browser session, since you won't be using one. The can be accomplished by setting these properties:
+We also need to turn off the browser session, since we're only doing API testing. This can be accomplished by setting these properties:
 
 ```json
 {

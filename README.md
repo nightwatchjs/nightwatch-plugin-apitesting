@@ -24,15 +24,22 @@ Edit your `nightwatch.json` (or `nightwatch.conf.js`) file and add the following
  
 ```json
 {
-  "start_session": false,
-  "webdriver": {
-    "start_process": false
-  },
   "plugins": [
     "@nightwatch/apitesting"      
   ]
 }
 ```
+
+You also need to turn off the browser session, since you won't be using one. The can be accomplished by setting these properties:
+
+```json
+{
+  "start_session": false,
+  "webdriver": {
+    "start_process": false
+  }
+}  
+```  
 
 ## Usage
 

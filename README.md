@@ -4,7 +4,7 @@
 [![tests](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/nightwatchjs/nightwatch-plugin-apitesting/actions/workflows/build.yml)
 [![Discord][discord-badge]][discord]
 
-## Nightwatch.js API Testing
+## API Testing in Nightwatch
 
 This plugin brings support for API testing into Nightwatch. It contains the following features:
 - integration with [superagent](https://www.npmjs.com/package/supertest) for testing HTTP requests

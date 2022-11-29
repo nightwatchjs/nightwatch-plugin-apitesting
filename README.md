@@ -7,7 +7,7 @@
 ## API Testing in Nightwatch
 
 This plugin brings support for API testing into Nightwatch. It contains the following features:
-- integration with [superagent](https://www.npmjs.com/package/supertest) for testing HTTP requests
+- integration with [supertest](https://www.npmjs.com/package/supertest) for testing HTTP requests
 - built-in mock server based on [express](https://www.npmjs.com/package/express) with support for [sinon](https://www.npmjs.com/package/sinon) assertions on mocked HTTP requests  
 
 Requires Nightwatch 2.5.2 or higher. 

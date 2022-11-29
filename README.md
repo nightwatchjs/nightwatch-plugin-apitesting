@@ -43,8 +43,8 @@ We also need to turn off the browser session, since we're only doing API testing
 
 ## Usage
 
-### Test API requests with superagent
-[superagent](https://www.npmjs.com/package/supertest) is a popular HTTP request library that is used in many Node.js projects. 
+### Test API requests with supertest
+[supertest](https://www.npmjs.com/package/supertest) is a popular HTTP request library that is used in many Node.js projects. 
 
 Using `supertest` in Nightwatch allows you to test your API endpoints and assert on the responses using its popular fluent API. 
 

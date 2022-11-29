@@ -186,6 +186,27 @@ await mockServer.setup((app) => {
   });
 ```
 
+For waiting for incoming requests tests, you can use the [`waitUntil()`](https://nightwatchjs.org/api/waitUntil.html) command.
+
+Example using waitUntil:
+```js
+  it('demo test', async function(client) {
+    const timeoutMs = 15000;
+    const retryIntervalMs = 500;
+    
+    await client.waitUntil(async function () {
+      const spy = server.route.get('/api/v1/schemas');
+
+      if (spy) {
+        return spy.calledOnce;
+      }
+
+      return false;
+    }, timeoutMs, retryIntervalMs, new Error(`time out reached (10000ms) while waiting for API call.`));  
+  });
+```
+
+
 ## License
 MIT
 

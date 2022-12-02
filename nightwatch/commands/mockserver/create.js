@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const methods = require('methods');
-const request = require('supertest');
+const cors = require('cors');
 const SuperTest = require('../supertest/request.js');
 
 const spies = {};
@@ -77,6 +77,7 @@ module.exports = class {
     this.app.use(bodyParser.urlencoded({extended: false}));
     this.app.use(bodyParser.json());
     this.app.use(cookieParser());
+    this.app.use(cors());
 
     const result = {
       start: function(port) {

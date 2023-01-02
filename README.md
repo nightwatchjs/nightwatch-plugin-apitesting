@@ -38,7 +38,7 @@ We also need to turn off the browser session, since we're only doing API testing
   "webdriver": {
     "start_process": false
   }
-}  
+}
 ```  
 
 ## Usage
@@ -90,20 +90,9 @@ describe('api testing with supertest in nightwatch', function () {
 });
 ```
 
-You can also use the classic callback style:
+### Syntax
 
-```js
-  it('demo test', function({supertest}) {
-    supertest
-      .request(app)
-      .get('/api/v1/')
-      .expect(200)
-      .expect('Content-Type', /json/)
-      .end(function() {
-        console.log('done');
-      });
-  });
-```
+> All `supertest.request()` calls should be `await`ed. The classic callback syntax is not supported.
 
 ### Integrated mock server
 

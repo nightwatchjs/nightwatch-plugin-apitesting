@@ -1,16 +1,20 @@
 const EventEmitter = require('events');
 const methods = require('methods');
 const request = require('supertest');
+const {Logger} = require('nightwatch/lib/utils');
 
 module.exports = class SuperTest extends EventEmitter {
   static createRequestFn(context) {
     return function(app, callback) {
       const result = {};
       const api = this.api;
+      const pluginSettings = this.client.settings['@nightwatch/apitesting'] || {};
+      const {argv} = this.client
 
       methods.forEach((key) => {
         result[key] = new function() {
           return function (...args) {
+            const startTime = new Date();
             const res = request(app)[key](...args);
 
             const expectFn = res.expect;
@@ -25,6 +29,10 @@ module.exports = class SuperTest extends EventEmitter {
               res._asserts.length = 0;
 
               return endFn.call(res, function(err, resp) {
+                if ((pluginSettings.log_responses || argv.verbose)) {
+                  Logger.info(`  Response ${key.toUpperCase()} ${resp.request.url} (${new Date() - startTime}ms) `,  resp.body, '\n');
+                }
+
                 assertions.forEach((assertion, index) => {
                   const errorObj = res._assertFunction(assertion, resp);
                   if (errorObj instanceof Error) {

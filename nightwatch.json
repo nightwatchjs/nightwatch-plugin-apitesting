@@ -6,5 +6,8 @@
   },
   "detailed_output": true,
   "disable_colors": true,
-  "plugins": ["./test_plugin.js"]
+  "plugins": ["./test_plugin.js"],
+  "@nightwatch/apitesting" : {
+    "log_responses": true
+  }
 }

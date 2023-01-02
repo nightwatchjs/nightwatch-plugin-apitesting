@@ -10,17 +10,17 @@ This plugin brings support for API testing into Nightwatch. It contains the foll
 - integration with [supertest](https://www.npmjs.com/package/supertest) for testing HTTP requests
 - built-in mock server based on [express](https://www.npmjs.com/package/express) with support for [sinon](https://www.npmjs.com/package/sinon) assertions on mocked HTTP requests  
 
-Requires Nightwatch 2.5.2 or higher. 
+Requires Nightwatch 2.6.4 or higher. 
 
 ## Installation
 
+1) Install the plugin from NPM:
+
 ```sh
-npm i nightwatch @nightwatch/apitesting --save-dev
+npm i @nightwatch/apitesting --save-dev
 ```
 
-## Configuration
-
-Edit your `nightwatch.json` (or `nightwatch.conf.js`) file and add the following:
+2) Edit your `nightwatch.json` (or `nightwatch.conf.js`) file and add the following:
  
 ```json
 {
@@ -29,6 +29,8 @@ Edit your `nightwatch.json` (or `nightwatch.conf.js`) file and add the following
   ]
 }
 ```
+
+3) Disable the browser session
 
 We also need to turn off the browser session, since we're only doing API testing. This can be accomplished by setting these properties:
 
@@ -41,7 +43,23 @@ We also need to turn off the browser session, since we're only doing API testing
 }
 ```  
 
+## Configuration
+
+The plugin has for now only one configuration option, which is weather or not to log the HTTP responses to the console. This can be configured in the `nightwatch.json` (or `nightwatch.conf.js`) config file:
+
+```json
+{
+  "@nightwatch/apitesting" : {
+    "log_responses": true
+  }
+}
+```
+
 ## Usage
+
+### Test Syntax
+
+> All `supertest.request()` calls should be `await`ed. The classic callback syntax is not supported.
 
 ### Test API requests with supertest
 [supertest](https://www.npmjs.com/package/supertest) is a popular HTTP request library that is used in many Node.js projects. 
@@ -89,10 +107,6 @@ describe('api testing with supertest in nightwatch', function () {
 
 });
 ```
-
-### Syntax
-
-> All `supertest.request()` calls should be `await`ed. The classic callback syntax is not supported.
 
 ### Integrated mock server
 

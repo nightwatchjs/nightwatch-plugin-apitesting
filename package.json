@@ -6,6 +6,7 @@
   "version": "0.2.1",
   "description": "",
   "main": "index.js",
+  "types": "./nightwatch/types/index.d.ts",
   "scripts": {
     "test": "mocha"
   },

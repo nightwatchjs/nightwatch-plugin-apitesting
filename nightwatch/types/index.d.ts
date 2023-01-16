@@ -1,4 +1,5 @@
 import { SuperTest, Test } from 'supertest';
+export * from 'nightwatch';
 
 declare module 'nightwatch' {
   export interface NightwatchCustomCommands {

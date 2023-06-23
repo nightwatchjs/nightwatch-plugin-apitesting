@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "",
   "main": "index.js",
   "types": "./nightwatch/types/index.d.ts",
@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/nightwatchjs/nightwatch-plugin-apitesting#readme",
   "devDependencies": {
-    "nightwatch": "3.0.0"
+    "nightwatch": "3.0.1"
   },
   "peerDependencies": {
-    "nightwatch": "3.0.0-beta.1"
+    "nightwatch": "3.0.1"
   },
   "dependencies": {
     "body-parser": "^1.20.1",

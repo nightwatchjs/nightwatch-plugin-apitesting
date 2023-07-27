@@ -1,7 +1,7 @@
 const EventEmitter = require('events');
 const methods = require('methods');
 const request = require('supertest');
-const {Logger} = require('nightwatch/lib/utils');
+const {Logger} = require('nightwatch');
 
 module.exports = class SuperTest extends EventEmitter {
   static createRequestFn(context) {

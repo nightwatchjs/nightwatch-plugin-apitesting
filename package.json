@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/nightwatchjs/nightwatch-plugin-apitesting#readme",
   "devDependencies": {
-    "nightwatch": "3.0.1"
+    "nightwatch": "^3.1.0"
   },
   "peerDependencies": {
-    "nightwatch": "3.0.1"
+    "nightwatch": "^3.0.1"
   },
   "dependencies": {
     "body-parser": "^1.20.1",

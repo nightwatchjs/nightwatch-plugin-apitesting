@@ -29,6 +29,10 @@ module.exports = class SuperTest extends EventEmitter {
               res._asserts.length = 0;
 
               return endFn.call(res, function(err, resp) {
+                if (err) {
+                  return fn(err, resp);
+                }  
+
                 if ((pluginSettings.log_responses || argv.verbose)) {
                   Logger.info(`  Response ${key.toUpperCase()} ${resp.request.url} (${new Date() - startTime}ms) `,  resp.body, '\n');
                 }
